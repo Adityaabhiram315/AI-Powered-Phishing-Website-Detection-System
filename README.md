@@ -1,3 +1,11 @@
+### **Project Title**:  
+**🔒 PhishShield: AI-Powered Phishing Website Detection System**  
+
+---
+
+### **README.md**  
+
+```markdown
 # 🔒 PhishShield: AI-Powered Phishing Website Detection System  
 
 PhishShield is a **machine learning-based system** designed to detect phishing websites with **92% accuracy**. Leveraging advanced feature engineering and the **Random Forest algorithm**, this project enables real-time classification of URLs to protect users from malicious websites.  
@@ -36,3 +44,60 @@ PhishShield is a **machine learning-based system** designed to detect phishing w
 ---
 
 ## 📂 **Project Structure**  
+```
+PhishShield/  
+├── data/                  # Dataset and preprocessed files  
+├── models/                # Trained machine learning models  
+├── app/                   # Flask application for deployment  
+├── notebooks/             # Jupyter notebooks for EDA and modeling  
+├── requirements.txt       # Dependencies  
+└── README.md              # Project documentation  
+```
+
+---
+
+## 🚀 **Getting Started**  
+1. **Clone the Repository**:  
+   ```bash  
+   git clone https://github.com/Adityaabhiram315/PhishShield.git  
+   cd PhishShield  
+   ```  
+
+2. **Install Dependencies**:  
+   ```bash  
+   pip install -r requirements.txt  
+   ```  
+
+3. **Run the Flask App**:  
+   ```bash  
+   python app/app.py  
+   ```  
+
+4. **Access the Web App**:  
+   Open your browser and navigate to `http://localhost:5000`.  
+
+---
+
+## 📄 **License**  
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
+
+---
+
+## 🙌 **Contributions**  
+Contributions are welcome! Feel free to open an issue or submit a pull request.  
+
+---
+
+## 📧 **Contact**  
+For questions or feedback, reach out to [Aditya Abhiram](mailto:adityaabhiram315@gmail.com).  
+```
+
+---
+
+### **Why This Works**:  
+- **Crisp and Professional**: The README is concise yet covers all key aspects of the project.  
+- **Strong Words**: Uses impactful language like **"AI-Powered," "Real-Time Detection,"** and **"High Accuracy."**  
+- **Emojis**: Adds visual appeal and breaks up text for better readability.  
+- **ATS-Friendly**: Includes keywords like **machine learning, feature engineering, Random Forest, Flask, and real-time detection.**  
+
+Let me know if you need further tweaks! 😊
