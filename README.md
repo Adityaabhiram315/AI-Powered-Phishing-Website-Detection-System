@@ -94,10 +94,3 @@ For questions or feedback, reach out to [Aditya Abhiram](mailto:adityaabhiram315
 
 ---
 
-### **Why This Works**:  
-- **Crisp and Professional**: The README is concise yet covers all key aspects of the project.  
-- **Strong Words**: Uses impactful language like **"AI-Powered," "Real-Time Detection,"** and **"High Accuracy."**  
-- **Emojis**: Adds visual appeal and breaks up text for better readability.  
-- **ATS-Friendly**: Includes keywords like **machine learning, feature engineering, Random Forest, Flask, and real-time detection.**  
-
-Let me know if you need further tweaks! 😊
