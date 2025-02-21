@@ -1,53 +1,50 @@
-# Phishing Website Detection by Machine Learning Techniques
 
-## Objective
-A phishing website is a common social engineering method that mimics trustful uniform resource locators (URLs) and webpages. The objective of this project is to train machine learning models and deep neural nets on the dataset created to predict phishing websites. Both phishing and benign URLs of websites are gathered to form a dataset and from them required URL and website content-based features are extracted. The performance level of each model is measures and compared.
+# **Phishing Website Detection Using Machine Learning**  
 
-## Data Collection
-The set of phishing URLs are collected from opensource service called **PhishTank**. This service provide a set of phishing URLs in multiple formats like csv, json etc. that gets updated hourly. To download the data: https://www.phishtank.com/developer_info.php. From this dataset, 5000 random phishing URLs are collected to train the ML models.
+## **Objective**  
+Phishing websites are a common cybersecurity threat, designed to mimic legitimate sites and steal sensitive user information. This project aims to develop machine learning models to predict phishing websites based on extracted URL and webpage content features. The dataset consists of both phishing and benign URLs, and multiple machine learning models are trained and evaluated for performance.  
 
-The legitimate URLs are obatined from the open datasets of the University of New Brunswick, https://www.unb.ca/cic/datasets/url-2016.html. This dataset has a collection of benign, spam, phishing, malware & defacement URLs. Out of all these types, the benign url dataset is considered for this project. From this dataset, 5000 random legitimate URLs are collected to train the ML models.
+## **Data Collection**  
+The dataset for this project is compiled from two primary sources:  
 
-The above mentioned datasets are uploaded to the '[DataFiles](https://github.com/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Techniques/tree/master/DataFiles)' folder of this repository.
+- **Phishing URLs** were collected from an open-source phishing database, which is updated regularly to provide the latest phishing websites. A random selection of 5,000 phishing URLs was used for training.  
+- **Legitimate URLs** were sourced from a publicly available dataset that contains various types of URLs, including benign, spam, phishing, malware, and defacement. For this project, 5,000 legitimate URLs were selected.  
 
-## Feature Extraction
-The below mentioned category of features are extracted from the URL data:
+## **Feature Extraction**  
+Features were extracted from URLs and webpage content to enhance model accuracy. The extracted features fall into three categories:  
 
-1.   Address Bar based Features <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this category 9 features are extracted.
-2.   Domain based Features<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this category 4 features are extracted.
-3.   HTML & Javascript based Features<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this category 4 features are extracted.
+1. **Address Bar-Based Features** – Includes 9 features related to the structure of the URL, such as the presence of special characters, domain age, and HTTPS usage.  
+2. **Domain-Based Features** – 4 features derived from domain-related attributes, such as WHOIS information and IP-based detection.  
+3. **HTML & JavaScript-Based Features** – 4 features extracted from webpage content, including embedded scripts, iframe usage, and suspicious JavaScript functions.  
 
-*The details pertaining to these features are mentioned in the [URL Feature Extraction.ipynb.](https://github.com/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Techniques/blob/master/URL%20Feature%20Extraction.ipynb)[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Techniques/blob/master/URL%20Feature%20Extraction.ipynb)*
+A total of 17 features were extracted and stored for model training.  
 
-So, all together 17 features are extracted from the 10,000 URL dataset and are stored in '[5.urldata.csv](https://github.com/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Techniques/blob/master/DataFiles/5.urldata.csv)' file in the DataFiles folder.<br>
-The features are referenced from the https://archive.ics.uci.edu/ml/datasets/Phishing+Websites.
+## **Model Training & Evaluation**  
+The dataset was split into an **80-20** ratio, with 8,000 samples used for training and 2,000 for testing. Since this is a **supervised classification problem**, multiple machine learning models were implemented to classify URLs as phishing (1) or legitimate (0).  
 
-## Models & Training
+The following models were trained and evaluated:  
 
-Before stating the ML model training, the data is split into 80-20 i.e., 8000 training samples & 2000 testing samples. From the dataset, it is clear that this is a supervised machine learning task. There are two major types of supervised machine learning problems, called classification and regression.
+- **Decision Tree**  
+- **Random Forest**  
+- **Multilayer Perceptrons (MLP)**  
+- **XGBoost**  
+- **Autoencoder Neural Network**  
+- **Support Vector Machines (SVM)**  
 
-This data set comes under classification problem, as the input URL is classified as phishing (1) or legitimate (0). The supervised machine learning models (classification) considered to train the dataset in this project are:
+Each model's performance was assessed, and results were compared to determine the most effective approach.  
 
-* Decision Tree
-* Random Forest
-* Multilayer Perceptrons
-* XGBoost
-* Autoencoder Neural Network
-* Support Vector Machines
+## **Results & Best Performing Model**  
+After evaluating all models, the **XGBoost Classifier** demonstrated the highest accuracy of **86.4%**, making it the best-performing model for phishing website detection.  
 
-All these models are trained on the dataset and evaluation of the model is done with the test dataset. The elaborate details of the models & its training are mentioned in [Phishing Website Detection_Models & Training.ipynb](https://github.com/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Techniques/blob/master/Phishing%20Website%20Detection_Models%20%26%20Training.ipynb)[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Techniques/blob/master/Phishing%20Website%20Detection_Models%20%26%20Training.ipynb)
+## **Next Steps & Future Work**  
+This project can be extended further with practical implementations, such as:  
 
-## Presentation
+- Developing a **browser extension** that integrates the trained model to detect phishing websites in real-time.  
+- Creating a **GUI-based tool** where users can input a URL and receive an instant classification (legitimate or phishing).  
 
-The short video presentaion for this project is @ https://youtu.be/I1refTZp-pg. <br>
-The slide presentaion used in this video is [Phishing Website Detection by Machine Learning Techniques Presentation.pdf](https://github.com/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Techniques/blob/master/Phishing%20Website%20Detection%20by%20Machine%20Learning%20Techniques%20Presentation.pdf)
+Currently, efforts are underway to develop the browser extension, and updates will be provided as the project progresses.  
 
-## End Results
-From the obtained results of the above models, XGBoost Classifier has highest model performance of 86.4%. So the model is saved to the file '[XGBoostClassifier.pickle.dat](https://github.com/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Techniques/blob/master/XGBoostClassifier.pickle.dat)'
+## **Conclusion**  
+This project successfully demonstrates how machine learning techniques can be leveraged to detect phishing websites with high accuracy. By integrating advanced classification models and feature extraction techniques, this approach can enhance online security and help protect users from cyber threats.  
 
-### Next Steps
-
-This project can be further extended to creation of browser extention or developed a GUI which takes the URL and predicts it's nature i.e., legitimate of phishing. *As of now, I am working towards the creation of browser extention for this project. And may even try the GUI option also.* The further developments will be updated at the earliest. 
+---
