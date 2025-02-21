@@ -3,6 +3,9 @@
 
 ## **Objective**  
 Phishing websites are a common cybersecurity threat, designed to mimic legitimate sites and steal sensitive user information. This project aims to develop machine learning models to predict phishing websites based on extracted URL and webpage content features. The dataset consists of both phishing and benign URLs, and multiple machine-learning models are trained and evaluated for performance.  
+<img width="1344" alt="image" src="https://github.com/user-attachments/assets/874b55c7-a21f-4714-94d7-6623f5670df7" />
+## INTERNAL
+
 <img width="1344" alt="Screenshot 2025-02-21 at 4 39 31 PM" src="https://github.com/user-attachments/assets/c530adc7-18ab-4f16-b9ac-696efc76708b" />
 <img width="1344" alt="image" src="https://github.com/user-attachments/assets/e0527b88-525e-4c5a-be8e-08394d68f562" />
 
